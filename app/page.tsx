@@ -162,7 +162,6 @@ export default function Home() {
 
   return (
     <div className='h-auto w-full '>
-      <BgGradient />
       <div
         id='home'
         className='w-1/2 h-1/2 absolute top-0 left-0 bg-gradient-to-b rotate-45 opacity-50 from-primary/5 to-quaternary/10 blur-3xl'

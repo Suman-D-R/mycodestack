@@ -587,7 +587,7 @@ export default function Home() {
               fontWeight='bold'
               fill='white'
             >
-              2 years
+              8 months
             </text>
           </svg>
         </div>

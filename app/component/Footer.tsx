@@ -47,20 +47,20 @@ function Footer() {
   ];
 
   return (
-    <footer className='w-full bg-black/20 backdrop-blur-sm border-t border-gray-800/50 h-fit '>
-      <div className='max-w-7xl mx-auto px-6 py-12'>
+    <footer className='w-full bg-black/20 backdrop-blur-sm border-t border-gray-800/50 h-fit'>
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12'>
         {/* Main Footer Content */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8'>
           {/* Brand Section */}
-          <div className='space-y-4'>
-            <div className='text-2xl font-bold text-tertiary'>
+          <div className='space-y-3 sm:space-y-4'>
+            <div className='text-xl sm:text-2xl font-bold text-tertiary leading-tight'>
               Suman Devanga Rangaswamy
             </div>
-            <p className='text-sm text-gray-400 leading-relaxed'>
+            <p className='text-xs sm:text-sm text-gray-400 leading-relaxed'>
               Building beautiful, functional web experiences with a focus on
               user-centric design and smooth animations.
             </p>
-            <div className='flex flex-wrap gap-3'>
+            <div className='flex flex-wrap gap-2 sm:gap-3'>
               {socialLinks.map((social) => {
                 const IconComponent = social.icon;
                 return (
@@ -69,10 +69,10 @@ function Footer() {
                     href={social.url}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className={`text-gray-400 ${social.color} transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/30 group`}
+                    className={`text-gray-400 ${social.color} transition-colors duration-300 p-1.5 sm:p-2 rounded-lg hover:bg-gray-800/30 group`}
                     title={social.name}
                   >
-                    <IconComponent className='w-5 h-5' />
+                    <IconComponent className='w-4 h-4 sm:w-5 sm:h-5' />
                   </a>
                 );
               })}
@@ -80,13 +80,15 @@ function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className='space-y-4'>
-            <h3 className='text-lg font-semibold text-white'>Quick Links</h3>
-            <ul className='space-y-2'>
+          <div className='space-y-3 sm:space-y-4'>
+            <h3 className='text-base sm:text-lg font-semibold text-white'>
+              Quick Links
+            </h3>
+            <ul className='space-y-1.5 sm:space-y-2'>
               <li>
                 <a
                   href='#'
-                  className='text-gray-400 hover:text-tertiary transition-colors duration-300'
+                  className='text-xs sm:text-sm text-gray-400 hover:text-tertiary transition-colors duration-300 block py-0.5'
                 >
                   Home
                 </a>
@@ -94,7 +96,7 @@ function Footer() {
               <li>
                 <a
                   href='#'
-                  className='text-gray-400 hover:text-tertiary transition-colors duration-300'
+                  className='text-xs sm:text-sm text-gray-400 hover:text-tertiary transition-colors duration-300 block py-0.5'
                 >
                   About
                 </a>
@@ -102,7 +104,7 @@ function Footer() {
               <li>
                 <a
                   href='#'
-                  className='text-gray-400 hover:text-tertiary transition-colors duration-300'
+                  className='text-xs sm:text-sm text-gray-400 hover:text-tertiary transition-colors duration-300 block py-0.5'
                 >
                   Work
                 </a>
@@ -110,7 +112,7 @@ function Footer() {
               <li>
                 <a
                   href='#'
-                  className='text-gray-400 hover:text-tertiary transition-colors duration-300'
+                  className='text-xs sm:text-sm text-gray-400 hover:text-tertiary transition-colors duration-300 block py-0.5'
                 >
                   Contact
                 </a>
@@ -119,13 +121,15 @@ function Footer() {
           </div>
 
           {/* Services */}
-          <div className='space-y-4'>
-            <h3 className='text-lg font-semibold text-white'>Services</h3>
-            <ul className='space-y-2'>
+          <div className='space-y-3 sm:space-y-4'>
+            <h3 className='text-base sm:text-lg font-semibold text-white'>
+              Services
+            </h3>
+            <ul className='space-y-1.5 sm:space-y-2'>
               <li>
                 <a
                   href='#'
-                  className='text-gray-400 hover:text-tertiary transition-colors duration-300'
+                  className='text-xs sm:text-sm text-gray-400 hover:text-tertiary transition-colors duration-300 block py-0.5'
                 >
                   Web Development
                 </a>
@@ -133,7 +137,7 @@ function Footer() {
               <li>
                 <a
                   href='#'
-                  className='text-gray-400 hover:text-tertiary transition-colors duration-300'
+                  className='text-xs sm:text-sm text-gray-400 hover:text-tertiary transition-colors duration-300 block py-0.5'
                 >
                   UI/UX Design
                 </a>
@@ -141,7 +145,7 @@ function Footer() {
               <li>
                 <a
                   href='#'
-                  className='text-gray-400 hover:text-tertiary transition-colors duration-300'
+                  className='text-xs sm:text-sm text-gray-400 hover:text-tertiary transition-colors duration-300 block py-0.5'
                 >
                   Animation
                 </a>
@@ -149,7 +153,7 @@ function Footer() {
               <li>
                 <a
                   href='#'
-                  className='text-gray-400 hover:text-tertiary transition-colors duration-300'
+                  className='text-xs sm:text-sm text-gray-400 hover:text-tertiary transition-colors duration-300 block py-0.5'
                 >
                   Consulting
                 </a>
@@ -158,20 +162,22 @@ function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className='space-y-4'>
-            <h3 className='text-lg font-semibold text-white'>Get In Touch</h3>
-            <div className='space-y-3 text-sm text-gray-400'>
-              <div className='flex items-center gap-2'>
-                <IconMail className='w-4 h-4 text-tertiary' />
+          <div className='space-y-3 sm:space-y-4'>
+            <h3 className='text-base sm:text-lg font-semibold text-white'>
+              Get In Touch
+            </h3>
+            <div className='space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-gray-400'>
+              <div className='flex items-start gap-2'>
+                <IconMail className='w-3 h-3 sm:w-4 sm:h-4 text-tertiary mt-0.5 flex-shrink-0' />
                 <a
                   href='mailto:sumandr27@gmail.com'
-                  className='hover:text-tertiary transition-colors duration-300'
+                  className='hover:text-tertiary transition-colors duration-300 break-all'
                 >
                   sumandr27@gmail.com
                 </a>
               </div>
-              <div className='flex items-center gap-2'>
-                <IconPhone className='w-4 h-4 text-tertiary' />
+              <div className='flex items-start gap-2'>
+                <IconPhone className='w-3 h-3 sm:w-4 sm:h-4 text-tertiary mt-0.5 flex-shrink-0' />
                 <div className='flex flex-col gap-1'>
                   <a
                     href='tel:+971545419063'
@@ -188,16 +194,16 @@ function Footer() {
                 </div>
               </div>
               <div className='flex items-center gap-2'>
-                <IconMapPin className='w-4 h-4 text-tertiary' />
+                <IconMapPin className='w-3 h-3 sm:w-4 sm:h-4 text-tertiary flex-shrink-0' />
                 <span>Dubai, UAE</span>
               </div>
               <button
                 onClick={() =>
                   window.open('mailto:sumandr27@gmail.com', '_blank')
                 }
-                className='mt-4 px-6 py-2 bg-tertiary text-white rounded-full hover:bg-quaternary transition-colors duration-300 font-medium flex items-center gap-2'
+                className='mt-3 sm:mt-4 px-4 sm:px-6 py-2 bg-tertiary text-white rounded-full hover:bg-quaternary transition-colors duration-300 font-medium flex items-center gap-2 text-xs sm:text-sm'
               >
-                <IconMail className='w-4 h-4' />
+                <IconMail className='w-3 h-3 sm:w-4 sm:h-4' />
                 Contact Me
               </button>
             </div>
@@ -205,15 +211,16 @@ function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className='border-t border-gray-800/50 pt-8'>
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
-            <div className='text-sm text-gray-400 flex items-center gap-1'>
+        <div className='border-t border-gray-800/50 pt-6 sm:pt-8'>
+          <div className='flex flex-col sm:flex-row justify-between items-center space-y-3 sm:space-y-0'>
+            <div className='text-xs sm:text-sm text-gray-400 flex items-center gap-1 text-center sm:text-left'>
               © 2024{' '}
               <span className='text-tertiary'>Suman Devanga Rangaswamy</span>.
-              Made with <IconHeart className='w-4 h-4 text-red-500' /> in Dubai,
-              UAE
+              Made with{' '}
+              <IconHeart className='w-3 h-3 sm:w-4 sm:h-4 text-red-500' /> in
+              Dubai, UAE
             </div>
-            {/* <div className='flex space-x-6 text-sm'>
+            {/* <div className='flex space-x-4 sm:space-x-6 text-xs sm:text-sm'>
               <a
                 href='#'
                 className='text-gray-400 hover:text-tertiary transition-colors duration-300'

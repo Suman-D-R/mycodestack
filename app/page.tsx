@@ -205,10 +205,10 @@ export default function Home() {
         data-aos='fade-up'
         className='w-full flex flex-col items-center justify-center px-8 my-10 h-fit'
       >
-        <div className='lg:text-6xl  text-4xl my-7 font-bold text-tertiary '>
+        <div className='lg:text-6xl  text-3xl my-7 font-bold text-tertiary '>
           About Me
         </div>
-        <div className='relative flex flex-col  items-center justify-center gap-4 max-w-5xl lg:text-xl text-sm font-normal text-white text-center'>
+        <div className='relative flex flex-col  items-center justify-center gap-4 max-w-5xl text-xs lg:text-sm  font-normal text-white text-center'>
           <div className=''>
             I build web apps with React, Next.js, Tailwind, and other cool
             tools. On the backend, I use Node, Express, and MongoDB. My goal is
@@ -230,7 +230,7 @@ export default function Home() {
         id='work'
         className='w-full h-full flex items-center justify-center mt-12'
       >
-        <div className='lg:text-6xl text-4xl font-bold text-tertiary animate-on-scroll'>
+        <div className='lg:text-6xl text-3xl font-bold text-tertiary animate-on-scroll'>
           Experience
         </div>
       </div>
@@ -374,7 +374,7 @@ export default function Home() {
               </div>
               <div className='font-normal'>Self-Employed</div>
             </div>
-            <div className='text-sm font-normal flex flex-col gap-2 text-center'>
+            <div className='text-xs lg:text-sm font-normal flex flex-col gap-2 text-center'>
               <div className='animate-on-scroll'>
                 I developed and maintained web applications for diverse clients
                 using Next.js, React, and Node.js, delivering responsive,
@@ -464,7 +464,7 @@ export default function Home() {
               </div>
               <div className='font-normal'>(Freelancer)</div>
             </div>
-            <div className='text-sm font-normal flex flex-col gap-2 text-center'>
+            <div className='text-xs lg:text-sm font-normal flex flex-col gap-2 text-center'>
               <div className='animate-on-scroll'>
                 Leveraged the MERN stack to create diverse applications,
                 including landing pages, the Siri Ambari Hotel landing and

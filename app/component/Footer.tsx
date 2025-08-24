@@ -24,25 +24,25 @@ function Footer() {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/suman-d-r',
       icon: IconBrandLinkedin,
-      color: 'hover:text-blue-600',
+      color: 'hover:text-quaternary',
     },
     {
       name: 'GitHub',
       url: 'https://github.com/Suman-D-R',
       icon: IconBrandGithub,
-      color: 'hover:text-gray-300',
+      color: 'hover:text-quaternary',
     },
     {
       name: 'Instagram',
       url: 'https://www.instagram.com/suman_d_r',
       icon: IconBrandInstagram,
-      color: 'hover:text-pink-500',
+      color: 'hover:text-quaternary',
     },
     {
       name: 'Rive Animation',
       url: 'https://community.rive.app/u/d3710dd6',
       icon: IconKeyframe,
-      color: 'hover:text-blue-500',
+      color: 'hover:text-quaternary',
     },
   ];
 
@@ -69,7 +69,7 @@ function Footer() {
                     href={social.url}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className={`text-gray-400 ${social.color} transition-colors duration-300 p-1.5 sm:p-2 rounded-lg hover:bg-gray-800/30 group`}
+                    className={`text-tertiary ${social.color} transition-colors duration-300 p-1.5 sm:p-2 rounded-lg hover:bg-gray-800/30 group`}
                     title={social.name}
                   >
                     <IconComponent className='w-4 h-4 sm:w-5 sm:h-5' />

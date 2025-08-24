@@ -6,6 +6,7 @@ import Header from './component/Header';
 import AOSInit from './component/AOS';
 import Footer from './component/Footer';
 import Particles from './component/Particles';
+import ConditionalLayout from './component/ConditionalLayout';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -33,11 +34,7 @@ export default function RootLayout({
         suppressContentEditableWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-svh w-full text-secondary overflow-y-auto`}
       >
-        <Particles />
-        <AOSInit />
-        <Header />
-        {children}
-        <Footer />
+        <ConditionalLayout>{children}</ConditionalLayout>
       </body>
     </html>
   );

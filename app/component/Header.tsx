@@ -104,14 +104,21 @@ function Header() {
     }
   };
 
+  const { rive: rive2, RiveComponent: RiveComponent2 } = useRive({
+    src: '/rive/tree.riv',
+    stateMachines: 'State Machine 1',
+    autoplay: true,
+    useOffscreenRenderer: true,
+  });
+
   return (
     <>
-      <div className='w-full fadeDown z-50 flex font-semibold justify-between text-xl items-center text-texttertiary px-6 py-4 fixed top-0 backdrop-blur-sm '>
+      <div className='w-full fadeDown z-50 flex justify-between text-xl items-center text-texttertiary px-6 py-2 fixed top-0 backdrop-blur-sm '>
         <div
           onClick={() => handleNavigation('home')}
-          className='cursor-pointer hover:text-tertiary transition-colors duration-200'
+          className='cursor-pointer hover:text-tertiary transition-colors duration-200 h-12 w-12'
         >
-          {`<Code/>`}
+          <RiveComponent2 />
         </div>
         <div className='lg:flex items-center gap-6  hidden '>
           <span
@@ -143,7 +150,7 @@ function Header() {
           <RiveComponent onClick={toggleActiveInput} />
         </div>
         {openMenu && (
-          <div className='fixed top-0 left-0 w-full h-dvh flex flex-col items-center justify-start gap-4  font-medium bg-black/95 z-40 p-20 transition-all duration-300 ease-in-out '>
+          <div className='fixed top-0 left-0 w-full h-dvh flex flex-col items-center justify-start gap-4 bg-black/95 z-40 p-20 transition-all duration-300 ease-in-out '>
             <span
               onClick={() => handleNavigation('home')}
               className='cursor-pointer hover:text-tertiary transition-colors duration-200'

@@ -145,15 +145,6 @@ export default function Home() {
         strokeProgress * 2 // Adjusted timing to match new duration
       );
     });
-
-    // Animate elements on scroll
-    gsap.defaults({ ease: 'power3' });
-    gsap.set('.animate-on-scroll', { opacity: 0, y: 100 });
-
-    ScrollTrigger.batch('.animate-on-scroll', {
-      interval: 0.1,
-      onEnter: (batch: any) => gsap.to(batch, { opacity: 1, y: 0 }),
-    });
   }, []);
 
   return (
@@ -163,10 +154,10 @@ export default function Home() {
           <div className='animate-spin rounded-full h-16 w-16 border-b-2 border-quaternary'></div>
         </div>
       )}
-      <div className='h-auto w-full '>
+      <div className='h-auto w-full bg-black'>
         <div
           id='home'
-          className='w-1/2 h-1/2 absolute top-0 left-0 bg-gradient-to-b rotate-45 opacity-50 from-primary/5 to-quaternary/10 blur-3xl'
+          className='w-1/2 h-1/2 absolute top-0 left-0 bg-gradient-to-b rotate-45 opacity-0 from-primary/5 to-quaternary/5 blur-3xl'
         />
         <div className='w-full h-svh flex items-center justify-center relative'>
           <div className='absolute top-0 left-0 w-full h-full opacity-5 z-0 blur-3xl' />
@@ -203,13 +194,18 @@ export default function Home() {
         {/* About Me */}
         <div
           id='about'
-          data-aos='fade-up'
           className='w-full flex flex-col items-center justify-center px-8 my-10 h-fit'
         >
-          <div className='lg:text-6xl  text-3xl my-7 font-bold text-tertiary '>
+          <div
+            data-aos='fade-right'
+            className='lg:text-6xl  text-3xl my-7 font-bold text-tertiary '
+          >
             About Me
           </div>
-          <div className='relative flex flex-col  items-center justify-center gap-4 max-w-5xl text-xs lg:text-lg  font-normal text-white text-center'>
+          <div
+            data-aos='fade-left'
+            className='relative flex flex-col  items-center justify-center gap-4 max-w-5xl text-xs lg:text-lg  font-normal text-white text-center'
+          >
             <div className=''>
               I build web apps with React, Next.js, Tailwind, and other cool
               tools. On the backend, I use Node, Express, and MongoDB. My goal
@@ -229,24 +225,28 @@ export default function Home() {
         {/* Experience */}
         <div
           id='work'
+          data-aos='fade-left'
           className='w-full h-full flex items-center justify-center mt-12'
         >
-          <div className='lg:text-6xl text-3xl font-bold text-tertiary animate-on-scroll'>
+          <div className='lg:text-6xl text-3xl font-bold text-tertiary '>
             Experience
           </div>
         </div>
 
         <div className='w-full lg:h-[1619px] h-auto relative mt-6 px-8'>
-          <div className='w-full grid lg:grid-cols-2 max-w-6xl mx-auto gap-4 text-white relative'>
+          <div
+            data-aos='fade-right'
+            className='w-full grid lg:grid-cols-2 max-w-6xl mx-auto gap-4 text-white relative'
+          >
             <div className='w-full lg:h-[404px] h-auto flex flex-col gap-2 items-center justify-center'>
-              <div className='flex flex-col justify-center items-center animate-on-scroll'>
+              <div className='flex flex-col justify-center items-center '>
                 <div className='lg:text-2xl text-lg font-bold'>
                   Front End Engineer{' '}
                 </div>
                 <div className='font-normal'>Soul Trading LLC, (Dubai)</div>
               </div>
               <div className='text-xs lg:text-sm font-normal flex flex-col gap-2 text-center'>
-                <div className='animate-on-scroll'>
+                <div className=''>
                   I’ve developed and deployed multiple iGaming projects,
                   including slots, poker, and casual games like Mines, Plinko,
                   and Limbo, with secure gameplay logic and real-time
@@ -255,7 +255,7 @@ export default function Home() {
                   load times, and seamless multiplayer features through
                   WebSockets and MQTT.
                 </div>
-                <div className='animate-on-scroll'>
+                <div className=''>
                   I led end-to-end development, from planning to deployment,
                   while driving best practices through code reviews and
                   performance optimizations. By integrating animations with Rive
@@ -264,7 +264,7 @@ export default function Home() {
                   responsive, intuitive, and accessible interfaces across
                   devices.
                 </div>
-                <div className='animate-on-scroll flex flex-wrap gap-2 items-center justify-center'>
+                <div className=' flex flex-wrap gap-2 items-center justify-center'>
                   <span className='font-bold'>Tech Stack:</span>
                   <span className='flex gap-1 backdrop-blur-sm items-center bg-white/10 rounded-xl w-fit px-2 py-1 text-[10px]'>
                     <IconBrandReact size={16} />
@@ -301,17 +301,20 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='flex flex-col justify-center items-center animate-on-scroll text-xs lg:text-base'>
+            <div className='flex flex-col justify-center items-center  text-xs lg:text-base'>
               Mar 2024 - Present
             </div>
           </div>
 
-          <div className='w-full grid lg:grid-cols-2 mt-10 lg:mt-0 grid-cols-1 max-w-6xl mx-auto gap-4 text-white relative'>
-            <div className='flex flex-col text-xs lg:text-base justify-center items-center animate-on-scroll order-last lg:order-first'>
+          <div
+            data-aos='fade-left'
+            className='w-full grid lg:grid-cols-2 mt-10 lg:mt-0 grid-cols-1 max-w-6xl mx-auto gap-4 text-white relative'
+          >
+            <div className='flex flex-col text-xs lg:text-base justify-center items-center  order-last lg:order-first'>
               Apr 2023 - Mar 2024
             </div>
             <div className='w-full lg:h-[404px] h-auto flex flex-col gap-2 items-center justify-center text-white lg:px-8 px-2'>
-              <div className='flex flex-col justify-center items-center animate-on-scroll'>
+              <div className='flex flex-col justify-center items-center '>
                 <div className='text-xl lg:text-2xl font-bold'>
                   Front End Engineer{' '}
                 </div>
@@ -321,7 +324,7 @@ export default function Home() {
                 </div>
               </div>
               <div className='text-xs lg:text-sm font-normal flex flex-col gap-2 text-center'>
-                <div className='animate-on-scroll'>
+                <div className=''>
                   I developed and maintained responsive product pages and
                   navigation components using React, Next.js, and Tailwind CSS,
                   ensuring smooth and visually consistent user experiences
@@ -333,7 +336,7 @@ export default function Home() {
                   created secure features tailored for dashboards, payment
                   workflows, and transaction histories.
                 </div>
-                <div className='animate-on-scroll'>
+                <div className=''>
                   Additionally, I integrated RESTful APIs for seamless data flow
                   and dynamic rendering, enabling real-time financial data
                   visualization and transaction tracking. Through testing,
@@ -342,7 +345,7 @@ export default function Home() {
                   with a strong focus on data accuracy, security, and compliance
                   in financial applications.
                 </div>
-                <div className='animate-on-scroll flex flex-wrap gap-2 items-center justify-center'>
+                <div className=' flex flex-wrap gap-2 items-center justify-center'>
                   <span className='font-bold'>Tech Stack:</span>
                   <span className='flex gap-1 backdrop-blur-sm items-center bg-white/10 rounded-xl w-fit px-2 py-1 text-[10px]'>
                     <IconBrandNextjs size={16} />
@@ -369,16 +372,19 @@ export default function Home() {
             </div>
           </div>
 
-          <div className='w-full grid lg:grid-cols-2 mt-10 lg:mt-0 grid-cols-1 max-w-6xl mx-auto gap-4 text-white relative'>
+          <div
+            data-aos='fade-right'
+            className='w-full grid lg:grid-cols-2 mt-10 lg:mt-0 grid-cols-1 max-w-6xl mx-auto gap-4 text-white relative'
+          >
             <div className='w-full lg:h-[404px] h-auto flex flex-col gap-2 items-center justify-center text-white'>
-              <div className='flex flex-col justify-center items-center animate-on-scroll'>
+              <div className='flex flex-col justify-center items-center '>
                 <div className='lg:text-2xl text-lg font-bold'>
                   Freelance Fullstack Developer
                 </div>
                 <div className='font-normal'>Self-Employed</div>
               </div>
               <div className='text-xs lg:text-sm font-normal flex flex-col gap-2 text-center'>
-                <div className='animate-on-scroll'>
+                <div className=''>
                   I developed and maintained web applications for diverse
                   clients using Next.js, React, and Node.js, delivering
                   responsive, scalable, and high-performing solutions. Managing
@@ -389,7 +395,7 @@ export default function Home() {
                   clear communication and solutions tailored to their goals and
                   challenges.
                 </div>
-                <div className='animate-on-scroll'>
+                <div className=''>
                   I adapted quickly to evolving requirements, applying creative
                   problem-solving and strong time management to meet tight
                   deadlines without compromising quality. By implementing
@@ -399,7 +405,7 @@ export default function Home() {
                   seamlessly across devices, and created lasting value for
                   clients.
                 </div>
-                <div className='animate-on-scroll flex flex-wrap gap-2 items-center justify-center'>
+                <div className=' flex flex-wrap gap-2 items-center justify-center'>
                   <span className='font-bold'>Tech Stack:</span>
                   <span className='flex gap-1 backdrop-blur-sm items-center bg-white/10 rounded-xl w-fit px-2 py-1 text-[10px]'>
                     <IconBrandReactNative size={16} />
@@ -452,34 +458,37 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className='flex flex-col justify-center items-center text-xs lg:text-base animate-on-scroll'>
+            <div className='flex flex-col justify-center items-center text-xs lg:text-base '>
               Nov 2021 - present
             </div>
           </div>
 
-          <div className='w-full grid lg:grid-cols-2 mt-10 lg:mt-0 grid-cols-1 max-w-6xl mx-auto gap-4 text-white relative'>
-            <div className='flex flex-col justify-center items-center text-xs lg:text-base animate-on-scroll order-last lg:order-first'>
+          <div
+            data-aos='fade-left'
+            className='w-full grid lg:grid-cols-2 mt-10 lg:mt-0 grid-cols-1 max-w-6xl mx-auto gap-4 text-white relative'
+          >
+            <div className='flex flex-col justify-center items-center text-xs lg:text-base  order-last lg:order-first'>
               March 2021 - Nov 2021
             </div>
             <div className='w-full lg:h-[404px] h-auto flex flex-col gap-2 items-center justify-center text-white'>
-              <div className='flex flex-col justify-center items-center animate-on-scroll'>
+              <div className='flex flex-col justify-center items-center '>
                 <div className='lg:text-2xl text-lg font-bold'>
                   MERN Stack Developer
                 </div>
                 <div className='font-normal'>(Freelancer)</div>
               </div>
               <div className='text-xs lg:text-sm font-normal flex flex-col gap-2 text-center'>
-                <div className='animate-on-scroll'>
+                <div className=''>
                   Leveraged the MERN stack to create diverse applications,
                   including landing pages, the Siri Ambari Hotel landing and
                   booking page, and a teaching platform for EQiXS.
                 </div>
-                <div className='animate-on-scroll'>
+                <div className=''>
                   Developed a robust teaching platform enabling teachers to
                   create accounts, host online sessions, and engage with
                   students effectively.
                 </div>
-                <div className='animate-on-scroll flex flex-wrap gap-2 items-center justify-center'>
+                <div className=' flex flex-wrap gap-2 items-center justify-center'>
                   <span className='font-bold'>Tech Stack:</span>
                   <span className='flex gap-1 backdrop-blur-sm items-center bg-white/10 rounded-xl w-fit px-2 py-1 text-[10px]'>
                     <IconBrandReact size={16} />
